@@ -1,0 +1,5 @@
+serviceBusinessShouldFetchAllNotes=true
+serviceBusinessShouldDeleteNoteWithId=true
+repositoryBusinessShouldPostNoteWithoutStatus=true
+repositoryBusinessShouldGetAllNotes=true
+repositoryBusinessShouldPostNote=true

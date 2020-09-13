@@ -1,0 +1,41 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/../css/style.css')
+    script(src='/../js/main.js')
+  body
+    div.wrapper
+      div.page-header
+        h2= title
+      div.page-container
+        div.page-data
+          form
+            table(cellpadding="11")
+              tr
+                td.label Title
+                td : 
+                  input(id="title" type="text" name="title" required)
+              tr
+                td.label Author
+                td : 
+                  input(type="text" name="author" id="author" required)
+              tr
+                td.label(valign="top") Description
+                td(valign="top") : 
+                  textarea(name="description" id="description" required cols="30" rows="5")
+              tr
+                td.label Status
+                td : 
+                  input(type="text" name="status" id="status" required)
+              tr
+                td.label
+                td &nbsp;
+                  input(type="button" value="Save" onclick="createNote()")
+                  input(type="button" name="cancel" value="Cancel" class="cancel" onclick="window.location.href = '/'")
+
+
+      div.footer
+        //- img(src="https://picsum.photos/100/50")
+
+    script(src="./../js/edit.js")

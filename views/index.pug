@@ -1,0 +1,40 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/../css/style.css')
+    script(src='/../js/main.js')
+  body
+    div.wrapper
+      div.page-header
+        h2= title
+      div.page-container
+        
+        div.page-data
+         div.data-btn
+           button(onclick="window.location.href = '/notes/create'" type="button") Add
+         div.data-table
+            if notes.length 
+              table(border="1" cellpadding="7" cellspacing="7")
+                  tr
+                    th(width="50px") Id
+                    th Title
+                    th Author
+                    th Description
+                    th Status
+                    th(width="120px") Action
+                    each note in notes
+                      tr
+                        td= note.id
+                        td= note.title
+                        td #{note.author}
+                        td #{note.description}
+                        td #{note.status}
+                        td
+                          a.a-inside.edit(onclick=`editNote(${note.id})`) Edit
+                          a.a-inside.delete(onclick=`deleteNote(${note.id})`) Delete
+            if !notes.length 
+              h3 No note found in database
+                
+      div.footer
+        //- img(src="https://picsum.photos/100/50")

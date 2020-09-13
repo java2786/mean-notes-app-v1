@@ -1,0 +1,2 @@
+routesBoundaryShouldReturn404WithUrl/app=true
+routesBoundaryShouldReturnHomePageWithUrl'/'=true
